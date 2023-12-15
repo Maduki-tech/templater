@@ -2,17 +2,13 @@ package handleFiles
 
 import (
 	"fmt"
-	"os"
-
 )
 
-func handleFiles(selectedItem string) {
+func HandleFiles(selectedItem string) {
 	switch selectedItem {
 	case "C":
-		fmt.Println("C")
-		os.Exit(0)
+	CreateCFile("makefile")
 	case "C++":
 		fmt.Println("C++")
-		os.Exit(0)
 	}
 }

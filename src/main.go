@@ -7,7 +7,7 @@ import (
 	"github.com/charmbracelet/bubbles/list"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
-	handlefiles "github.com/maduki-tech/templater/src/handlefiles"
+	"github.com/maduki-tech/templater/src/handleFiles"
 )
 
 var items = []list.Item{
@@ -42,8 +42,8 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		if msg.Type == tea.KeyEnter {
 			// print the element hovered
 			selectedItem := items[m.list.Index()].FilterValue()
-			fmt.Println(selectedItem)
-			handlefiles(selectedItem)
+			handleFiles.HandleFiles(selectedItem)
+			os.Exit(0)
 		}
 	case tea.WindowSizeMsg:
 		h, v := docStyle.GetFrameSize()
