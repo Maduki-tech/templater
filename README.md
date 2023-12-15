@@ -2,6 +2,8 @@
 
 > A Tool, where you can Create Basic Boilerplate, Run Commands or whatever you like.
 
+![](./example.gif)
+
 ## Currently Supported
 - C
 
