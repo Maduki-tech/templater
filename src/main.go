@@ -13,6 +13,9 @@ import (
 var items = []list.Item{
 	item{title: "C", desc: "C with Makefile"},
 	item{title: "C++", desc: "C++ with CMake"},
+	item{title: "React", desc: "React with npm"},
+	item{title: "React Native", desc: "React Native with npm"},
+	item{title: "React with T3-Stack", desc: "React with T3-Stack"},
 }
 
 var docStyle = lipgloss.NewStyle().Margin(1, 2)

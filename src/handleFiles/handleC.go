@@ -7,7 +7,7 @@ import (
 /*
 CreateCFile creates a C file with a makefile or CMakeLists.txt
 
-Input: 
+Input:
 	"makefile"
 	"cmake"
 
@@ -28,8 +28,8 @@ func writeCMakeLists() {
 }
 
 func writeMakefile() {
-os.WriteFile("Makefile",
-	[]byte(`CC=gcc
+	os.WriteFile("Makefile",
+		[]byte(`CC=gcc
 CFLAGS=-Iinclude -Wall -g
 # here you can add the DEPS you want to use 
 # Example: DEPS = libs/myheader.h
@@ -55,8 +55,8 @@ compile_commands:
 }
 
 func writeMain() {
-os.WriteFile("main.c",
-	[]byte(`#include <stdio.h>
+	os.WriteFile("main.c",
+		[]byte(`#include <stdio.h>
 
 int main() {
 	printf("Hello World!");
